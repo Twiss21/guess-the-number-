@@ -2,12 +2,12 @@
 
 A modern Guess the Number game built with HTML, CSS, and vanilla JavaScript.
 
-## Try It Online
+## Try It Online on Twiss21
 
 After enabling **GitHub Pages**, the app will be available at:
 
 ```text
-https://TVE-JMENO.github.io/TVE-REPOSITORY/
+https://twiss21.github.io/guess-the-number-/
 ```
 
 In GitHub:
