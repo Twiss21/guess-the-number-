@@ -2,21 +2,6 @@
 
 A modern Guess the Number game built with HTML, CSS, and vanilla JavaScript.
 
-## Try It Online on Twiss21
-
-After enabling **GitHub Pages**, the app will be available at:
-
-```text
-https://twiss21.github.io/guess-the-number-/
-```
-
-In GitHub:
-
-1. Open the repository and go to `Settings` > `Pages`.
-2. Select `Deploy from a branch` as the source.
-3. Select the `main` branch and the `/ (root)` folder.
-4. Save the settings and open the generated link.
-
 ## How to Download and Open the Game
 
 1. Open the GitHub repository.
