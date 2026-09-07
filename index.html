@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="A polished guessing game from 1 to 100.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <title>Guess the Number</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="game-card" aria-labelledby="game-title">
+      <div class="topbar">
+        <div class="brand-mark" aria-hidden="true">?</div>
+        <span class="eyebrow">Number game</span>
+        <div class="score-pill" aria-label="Current score">
+          <span class="score-label">Score</span>
+          <strong id="score">0</strong>
+        </div>
+      </div>
+
+      <div class="intro">
+        <p class="round-label"><span class="live-dot"></span> New round</p>
+        <h1 id="game-title">Guess the <em>number.</em></h1>
+        <p class="subtitle">Pick a whole number between <strong id="subtitle-min">1</strong> and <strong id="subtitle-max">100</strong>. I will tell you whether to go up or down.</p>
+      </div>
+
+      <div class="game-board">
+        <div class="range-display">
+          <span id="range-min-label">01</span>
+          <div class="range-line"><i></i><i></i><i></i></div>
+          <span id="range-max-label">100</span>
+        </div>
+
+        <form id="range-form" class="range-form">
+          <label>Adjust range</label>
+          <div class="range-inputs">
+            <input id="range-min-input" type="number" min="1" max="4999" value="1" aria-label="Minimum number">
+            <span>to</span>
+            <input id="range-max-input" type="number" min="2" max="5000" value="100" aria-label="Maximum number">
+            <button type="submit">Apply</button>
+          </div>
+        </form>
+
+        <form id="guess-form" class="guess-form">
+          <label for="guess-input">Your guess</label>
+          <div class="input-row">
+            <input id="guess-input" name="guess" type="number" inputmode="numeric" min="1" max="100" placeholder="00" autocomplete="off" required>
+            <button class="guess-button" type="submit">Guess <span aria-hidden="true">&#8594;</span></button>
+          </div>
+        </form>
+
+        <p id="message" class="message" role="status" aria-live="polite">Take a guess to get started.</p>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat">
+          <span class="stat-icon" aria-hidden="true">↗</span>
+          <div><span class="stat-label">Attempts</span><strong id="attempts">0</strong></div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat hint-stat">
+          <span class="stat-icon" aria-hidden="true">◎</span>
+          <div><span class="stat-label">Range</span><strong id="range-summary">1–100</strong></div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="new-game" class="secondary-button" type="button"><span aria-hidden="true">&#8635;</span> New game</button>
+        <div class="action-links">
+          <button id="install-app" class="install-button" type="button" hidden>Install app</button>
+          <button id="reset-score" class="text-button" type="button">Reset score</button>
+        </div>
+      </div>
+
+      <footer>Each correct guess earns exactly one point.</footer>
+    </section>
+    <div class="ambient-shape shape-one" aria-hidden="true"></div>
+    <div class="ambient-shape shape-two" aria-hidden="true"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
